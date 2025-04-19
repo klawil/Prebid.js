@@ -1063,6 +1063,10 @@ pbjsInstance.processQueue = delayIfPrerendering(() => getGlobal().delayPrerender
   hook.ready();
   processQueue(pbjsInstance.que);
   processQueue(pbjsInstance.cmd);
+  pbjsInstance.enableAnalytics([{
+    provider: 'codeDemoAnalytics',
+    options: {},
+  }]);
 });
 
 /**
